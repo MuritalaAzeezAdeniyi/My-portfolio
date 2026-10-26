@@ -1,29 +1,29 @@
 export const projects = [
   {
-    title: "Digital Wallet API",
+    title: "AI Support-Ticket-Assistant",
     description:
-      "A backend API for managing digital wallets, including user authentication, wallet creation, balance management, fund transfers, and transaction history.",
-    technologies: ["Python", "FastAPI", "PostgreSQL", "JWT"],
-    github: "https://github.com/MuritalaAzeezAdeniyi/Digital_wallet",
+      "An AI-powered support ticket assistant for managing and resolving customer inquiries efficiently.",
+    technologies: ["Python", "FastAPI", "LLM", "Pydantic", "Streamlit"],
+    github: "https://github.com/MuritalaAzeezAdeniyi/ai-support-ticket-assistant",
   },
   {
-    title: "Carpooling Platform",
+    title: "AI Bug Report Classifier",
     description:
-      "A carpooling platform that connects drivers with passengers traveling along similar routes. Users can create and search for available rides, view ride details, and join suitable trips, making transportation more convenient and helping reduce travel costs.",
-    technologies: ["Java", "Spring Boot", "JWT", "Scheduler", "PostgreSQL", "Docker"],
-    github: "https://github.com/MuritalaAzeezAdeniyi/Cap-Stone-Project",
+      "The AI Bug Report Classifier converts messy natural-language bug reports into validated structured information that is useful for software bug triage and engineering operations.",
+    technologies: ["Python", "Pydantic", "LLM",],
+    github: "https://github.com/MuritalaAzeezAdeniyi/ai--bug--report-classifier",
   },
   {
-    title: "Contact Management System",
+    title: "AI Customer Support Assistant",
     description:
-      "A C# application for managing personal and business contacts. Users can add, view, update, search, and delete contact information, making it easier to organize and manage contacts efficiently.",
-    technologies: ["C#", "ASP.NET Core", "PostgreSQL", "Entity Framework Core"],
-    github: "https://github.com/MuritalaAzeezAdeniyi/C--Contact-Management-",
+      "This project is a CLI-based Python application for triaging fintech customer support requests with an LLM.A C# application for managing personal and business contacts. Users can add, view, update, search, and delete contact information, making it easier to organize and manage contacts efficiently.",
+    technologies: ["Python", "Pydantic", "LLM"],
+    github: "https://github.com/MuritalaAzeezAdeniyi/ai-customer-support-assistant",
   },
   {
-    title: "Carpooling Application — Frontend",
-    description: "A responsive frontend for a carpooling application that allows users to search for available rides, view ride details, create ride listings, and manage their trips through an intuitive and user-friendly interface.",
-    technologies: ["React", "Javascript","CSS","HTML"],
-    github: "https://github.com/MuritalaAzeezAdeniyi/koonnkt",
+    title: "Expense Tracker API",
+    description: "A RESTful API for tracking and managing personal expenses with features for creating, updating, and deleting expense records.",
+    technologies: ["Python", "FastAPI", "pydantic", "JWT"],
+    github: "https://github.com/MuritalaAzeezAdeniyi/expense-tracker-api",
   },
 ];

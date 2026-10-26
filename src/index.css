@@ -28,6 +28,69 @@ body {
   background: #f8fafc;
 }
 
+.hero-grid {
+  background-image: linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+  animation: grid-drift 18s linear infinite;
+}
+
+.hero-orb {
+  position: absolute;
+  width: 18rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  border-radius: 999px;
+  pointer-events: none;
+  animation: orb-float 9s ease-in-out infinite;
+}
+
+.hero-orb-one { top: 12%; left: 8%; }
+.hero-orb-two { right: 5%; bottom: 8%; width: 10rem; animation-delay: -3s; }
+.hero-orb-one { --orb-x: var(--pointer-x, 0px); --orb-y: var(--pointer-y, 0px); }
+.hero-orb-two { --orb-x: calc(var(--pointer-x, 0px) * -0.7); --orb-y: calc(var(--pointer-y, 0px) * -0.7); }
+
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: hero-enter 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-reveal:nth-child(2) { animation-delay: 0.12s; }
+.hero-reveal:nth-child(3) { animation-delay: 0.22s; }
+.hero-reveal:nth-child(4) { animation-delay: 0.32s; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease var(--reveal-delay, 0ms), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal.interactive-card { transition: opacity 0.7s ease var(--reveal-delay, 0ms), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms), border-color 0.35s ease, box-shadow 0.35s ease; }
+.reveal.interactive-card.is-visible { transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); }
+.reveal.interactive-card.is-visible:hover { transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(-6px); }
+.interactive-card:hover { border-color: rgba(34, 211, 238, 0.55); }
+.button-lift:hover { transform: translateY(-3px); }
+
+@keyframes hero-enter { to { opacity: 1; transform: translateY(0); } }
+@keyframes grid-drift { to { background-position: 44px 44px; } }
+@keyframes orb-float {
+  0%, 100% { transform: translate(var(--orb-x, 0px), var(--orb-y, 0px)) rotate(0deg); }
+  50% { transform: translate(calc(var(--orb-x, 0px) + 12px), calc(var(--orb-y, 0px) - 18px)) rotate(8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-orb-one, .hero-orb-two, .reveal.interactive-card.is-visible { transform: none !important; }
+}
+
 a {
   color: inherit;
 }
