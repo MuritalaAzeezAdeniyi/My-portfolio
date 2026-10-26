@@ -7,13 +7,13 @@ export const experience = [
   },
   {
     company: "TravelWay",
-    role: "AI Python Engineer",
+    role: "Backend Engineer",
     period: "2025 - 2026",
-    description: "Develop and maintain AI-powered features, ensuring efficient data processing and API integration for various applications.",
+    description: "Develop and maintain backend services, ensuring efficient data processing and API integration for various applications.",
   },
   {
     company: "The Tann Mann Gaadi",
-    role: "Backend Engineer",
+    role: "Frontend Engineer",
     period: "2024 - 2025",
     description: "Building responsive and user-friendly web interfaces using modern frontend technologies.",
   },
